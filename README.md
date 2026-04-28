@@ -53,7 +53,6 @@ plt.plot(losses)
 plt.xlabel("Iterations")
 plt.ylabel("Loss (MSE)")
 plt.title("Loss vs Iterations")
-
 plt.subplot(1,2,2)
 plt.scatter(x,y)
 x_sorted = np.argsort(x)
@@ -61,13 +60,10 @@ plt.plot(x[x_sorted],(w*x+b)[x_sorted],color='red')
 plt.xlabel("R&D Spend(scaled)")
 plt.ylabel("Profit")
 plt.title("Linear Regression Fit")
-
 plt.tight_layout()
 plt.show()
-
 print("Final weight (w):",w)
 print("Final bias (b):",b)
-
 ```
 ## Output:
 ![linear regression using gradient descent](sam.png)
