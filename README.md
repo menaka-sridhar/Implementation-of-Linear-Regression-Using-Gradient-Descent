@@ -1,6 +1,5 @@
 # Implementation-of-Linear-Regression-Using-Gradient-Descent
-## AIM:
-To write a program to predict the profit of a city using the linear regression model with gradient descent.
+## AIM:To write a program to predict the profit of a city using the linear regression model with gradient descent.
 ## Equipments Required:
 1. Hardware – PCs
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
@@ -13,8 +12,7 @@ To write a program to predict the profit of a city using the linear regression m
 ```
 /*
 Program to implement the linear regression using gradient descent.
-Developed by: menaka m s
-RegisterNumber: 212225040232
+Developed by: menaka m sRegisterNumber: 212225040232
 */
 import pandas as pd
 import numpy as np
@@ -30,20 +28,16 @@ b=0.0
 alpha=0.01
 epochs=100
 n=len(x)
-
 losses=[]
 for _ in range(epochs):
     y_hat=w*x+b
     loss=np.mean((y_hat-y)**2)
     losses.append(loss)
-    
     dw=(2/n)*np.sum((y_hat-y)*x)
     db=(2/n)*np.sum(y_hat-y)
-    
     w -=alpha * dw
     b -=alpha * db
 plt.figure(figsize=(12,5))
-
 plt.subplot(1,2,1)
 plt.plot(losses)
 plt.xlabel("Iterations")
